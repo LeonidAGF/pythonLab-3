@@ -1,5 +1,10 @@
-from src.power import power_function
+from src.bubble_sort import bubble_sort
 from src.constants import SAMPLE_CONSTANT
+from src.counting_sort import counting_sort
+from src.fibo import fibo, fibo_recursive
+from src.heap_sort import heap_sort
+from src.quick_sort import quick_sort
+from src.radix_sort import radix_sort
 
 
 def main() -> None:
@@ -7,14 +12,8 @@ def main() -> None:
     Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
     :return: Данная функция ничего не возвращает
     """
-
-    target, degree = map(int, input("Введите два числа разделенные пробелом: ").split(" "))
-
-    result = power_function(target=target, power=degree)
-
-    print(result)
-
-    print(SAMPLE_CONSTANT)
+    lst = [8,2,5,3,3,4,1]
+    print(heap_sort(lst))
 
 if __name__ == "__main__":
     main()
