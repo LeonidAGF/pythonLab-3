@@ -1,4 +1,4 @@
-class Stack1:
+class my_stack:
     def __init__(self, obj=None):
         self.value = obj
         self.next = None
@@ -10,7 +10,7 @@ class Stack1:
             if position.minimum>x:
                 position.minimum = x
             position = position.next
-        position.next = Stack1(x)
+        position.next = my_stack(x)
 
     def pop(self) -> int:
         position = self

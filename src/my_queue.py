@@ -1,4 +1,4 @@
-class Queue1:
+class my_queue:
     def __init__(self, obj=None):
         self.value = obj
         self.next = None
@@ -7,7 +7,7 @@ class Queue1:
         position = self
         while position.next != None:
             position = position.next
-        position.next = Queue1(x)
+        position.next = my_queue(x)
 
     def dequeue(self):
         n = self.value

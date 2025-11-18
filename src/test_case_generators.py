@@ -56,7 +56,7 @@ def many_duplicates(n: int, k_unique=5, *, seed=None) -> list[int]:
 
 
 def reverse_sorted(n: int) -> list[int]:
-    rand_array: list[int] = rand_int_array(n, 1, n + 1)
+    rand_array: list[int] = [int(i) for i in range(1, n + 1)]
     rand_array.sort(reverse=True)
     return rand_array
 
