@@ -1,7 +1,6 @@
 from src.my_stack import my_stack
 
 
-
 def test_stack():
     """
         Тесты my_stack

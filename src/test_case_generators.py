@@ -72,6 +72,7 @@ def reverse_sorted(n: int) -> list[int]:
     Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
     :return: Данная функция ничего не возвращает
     """
+
     rand_array: list[int] = [int(i) for i in range(1, n + 1)]
     rand_array.sort(reverse=True)
     return rand_array

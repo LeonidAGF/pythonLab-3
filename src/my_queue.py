@@ -41,7 +41,7 @@ class My_queue:
         if self.tail == None:
             raise IndexError
 
-        is_new_object:int = 1
+        is_new_object: int = 1
         if self.head is x:
             is_new_object = 0
         else:

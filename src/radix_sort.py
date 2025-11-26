@@ -28,7 +28,6 @@ def radix_sort(a: list[int], base: int = 10) -> list[int]:
         return arr_minus + arr_plus
     return sort(arr_plus, 10)
 
-
 def sort(a: list[int], base: int = 10) -> list[int]:
     """
     Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение

@@ -14,6 +14,7 @@ def main() -> None:
     :return: Данная функция ничего не возвращает
     """
 
+
 arrays = {
     "rand_int_array": rand_int_array(500, 0, 1000, distinct=True),
     "many_duplicates": many_duplicates(100, 2),

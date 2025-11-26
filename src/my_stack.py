@@ -3,6 +3,7 @@ class my_stack:
     Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
     :return: Данная функция ничего не возвращает
     """
+
     def __init__(self, obj=None):
         """
         Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
@@ -19,12 +20,12 @@ class my_stack:
         """
         position = self
 
-        if position==None or position.value==None:
+        if position == None or position.value == None:
             position.value = x
             position.minimum = x
         else:
             while position.next != None:
-                if position.minimum>x:
+                if position.minimum > x:
                     position.minimum = x
                 position = position.next
             position.next = my_stack(x)
@@ -36,7 +37,7 @@ class my_stack:
         """
         position = self
 
-        if position==None or position.value==None:
+        if position == None or position.value == None:
             raise IndexError
 
         while position.next != None and position.next.next != None:
@@ -56,7 +57,7 @@ class my_stack:
         """
         position = self
 
-        if position==None or position.value==None:
+        if position == None or position.value == None:
             raise IndexError
 
         while position.next != None and position.next.next != None:
@@ -76,6 +77,7 @@ class my_stack:
             return True
         else:
             return False
+
     def __len__(self) -> int:
         """
         Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
@@ -83,17 +85,18 @@ class my_stack:
         """
         length = 0
         position = self
-        if position != None and position.value!=None:
-            length+=1
+        if position != None and position.value != None:
+            length += 1
         while position.next != None:
-            length+=1
+            length += 1
             position = position.next
         return length
+
     def min(self) -> int:
         """
         Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
         :return: Данная функция ничего не возвращает
         """
-        if self==None or self.value==None:
+        if self == None or self.value == None:
             raise IndexError
         return self.minimum
