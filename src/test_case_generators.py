@@ -2,6 +2,10 @@ import random
 
 
 def rand_int_array(n: int, lo: int, hi: int, *, distinct=False, seed=None) -> list[int]:
+    """
+    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+    :return: Данная функция ничего не возвращает
+    """
     random.seed(None)
     if seed != None:
         random.seed(seed)
@@ -16,6 +20,10 @@ def rand_int_array(n: int, lo: int, hi: int, *, distinct=False, seed=None) -> li
 
 
 def nearly_sorted(n: int, swaps: int, *, seed=None) -> list[int]:
+    """
+    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+    :return: Данная функция ничего не возвращает
+    """
     random.seed(None)
     array: list[int] = [int(i) for i in range(1, n + 1)]
     if seed != None:
@@ -31,6 +39,10 @@ def nearly_sorted(n: int, swaps: int, *, seed=None) -> list[int]:
 
 
 def many_duplicates(n: int, k_unique=5, *, seed=None) -> list[int]:
+    """
+    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+    :return: Данная функция ничего не возвращает
+    """
     random.seed(None)
     if seed != None:
         random.seed(seed)
@@ -56,12 +68,20 @@ def many_duplicates(n: int, k_unique=5, *, seed=None) -> list[int]:
 
 
 def reverse_sorted(n: int) -> list[int]:
+    """
+    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+    :return: Данная функция ничего не возвращает
+    """
     rand_array: list[int] = [int(i) for i in range(1, n + 1)]
     rand_array.sort(reverse=True)
     return rand_array
 
 
 def rand_float_array(n: int, lo=0.0, hi=1.0, *, seed=None) -> list[float]:
+    """
+    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+    :return: Данная функция ничего не возвращает
+    """
     random.seed(None)
     if seed != None:
         random.seed(seed)

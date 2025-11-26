@@ -2,6 +2,10 @@ from src.timeit import timeit_once
 
 
 def benchmark_sorts(arrays: dict[str, list], algos: dict[str, callable]) -> dict[str, dict[str, float]]:
+    """
+    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+    :return: Данная функция ничего не возвращает
+    """
     res: dict[str, dict[str, float]] = {}
     for func_name, link in algos.items():
         func_res:dict[str, float] = {}

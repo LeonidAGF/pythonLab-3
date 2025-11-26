@@ -1,4 +1,8 @@
 def quick_sort(a: list[int]) -> list[int]:
+    """
+    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+    :return: Данная функция ничего не возвращает
+    """
     if len(a)>0:
         main_element:int = a[0]
         elements_bigger:list[int] = [int(el) for el in a if el>main_element]

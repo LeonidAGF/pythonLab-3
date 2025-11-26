@@ -1,11 +1,11 @@
-from src.my_queue import my_queue
+from src.my_queue import My_queue, Object
 
 
 def test_queue():
     """
         Тесты для my_queue
     """
-    q = my_queue(1)
+    q = My_queue(1)
     q.enqueue(2)
     q.enqueue(3)
     q.enqueue(4)

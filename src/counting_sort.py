@@ -1,4 +1,8 @@
 def counting_sort(a: list[int]) -> list[int] :
+    """
+    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+    :return: Данная функция ничего не возвращает
+    """
     min_el:int = min(a)
     max_el :int = max(a)
     count_list:list[int] = [0]*(max_el-min_el+1)
