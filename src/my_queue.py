@@ -1,7 +1,6 @@
 class Object:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Класс, объект которого содержит какое-то значение и следующее значение в очереди
     """
 
     value = None
@@ -9,7 +8,7 @@ class Object:
 
     def __init__(self, obj):
         """
-        Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+        Конструктор
         :return: Данная функция ничего не возвращает
         """
         self.value = obj
@@ -18,8 +17,7 @@ class Object:
 
 class My_queue:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Класс реализующий очередь
     """
 
     head: Object = None
@@ -27,7 +25,7 @@ class My_queue:
 
     def __init__(self, obj):
         """
-        Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+        Коонструктор
         :return: Данная функция ничего не возвращает
         """
         self.head = Object(obj)
@@ -35,7 +33,7 @@ class My_queue:
 
     def enqueue(self, x: int) -> None:
         """
-        Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
+        Фуекция добаляет в конец очереди элемент x
         :return: Данная функция ничего не возвращает
         """
         if self.tail == None:
@@ -61,8 +59,8 @@ class My_queue:
 
     def dequeue(self) -> int:
         """
-        Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-        :return: Данная функция ничего не возвращает
+        Функция удаляет первый элемент из очереди
+        :return: Возвращает удалённый элемент
         """
 
         if self.head == None:
@@ -75,8 +73,7 @@ class My_queue:
 
     def front(self) -> int:
         """
-        Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-        :return: Данная функция ничего не возвращает
+        :return: Возвращает первый элемент очереди
         """
         if self.head == None:
             raise IndexError
@@ -84,8 +81,8 @@ class My_queue:
 
     def is_empty(self) -> bool:
         """
-        Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-        :return: Данная функция ничего не возвращает
+        Функция проверяет очередь на пустоту
+        :return: Возвращает True если очередь пуста, False иначе
         """
         if self.head == None:
             return True
@@ -94,10 +91,10 @@ class My_queue:
 
     def __len__(self) -> int:
         """
-        Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-        :return: Данная функция ничего не возвращает
+        Функция считает количество элементов в очереди
+        :return: Возвращает количесто элементов в очереди
         """
-        length = 0
+        length:int = 0
         if self.head != None:
             length += 1
         position: object = self.head
@@ -106,61 +103,3 @@ class My_queue:
                 length += 1
                 position = position.next
         return length
-
-
-"""    
-class my_queue:
-    
-    def __init__(self, obj=None):
-        
-        self.value = obj
-        self.next = None
-
-    def enqueue(self, x: int) -> None:
-        
-        position = self
-        if position.value==None:
-            position.value = x
-        else:
-            while position.next != None:
-                position = position.next
-            position.next = my_queue(x)
-
-    def dequeue(self):
-        
-        if self==None or self.value==None:
-            raise IndexError
-
-        n = self.value
-        self.value = None
-        if self != None:
-            if(self.next!=None):
-                self.value = self.next.value
-                self.next = self.next.next
-        return n
-
-    def front(self) -> int:
-        
-        if self==None or self.value==None:
-            raise IndexError
-        return self.value
-
-    def is_empty(self) -> bool:
-        
-        if self == None or (self.next==None and self.value==None):
-            return True
-        else:
-            return False
-
-    def __len__(self) -> int:
-
-        length = 0
-        position = self
-        if position != None and position.value!=None:
-            length+=1
-        while position.next != None:
-            length+=1
-            position = position.next
-        return length
-
-"""

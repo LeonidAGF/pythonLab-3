@@ -1,7 +1,7 @@
 def to_10_base(num: int, base: int) -> int:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Переводит число звписанное в системе счисления с основанием <10 в число в десятеричной системе счисления
+    :return: Возвращает число переведённое из системы счисления с онованием <10 в десятиричную систему счисления
     """
     res: int = 0
     mnogitel: int = 1
@@ -13,16 +13,16 @@ def to_10_base(num: int, base: int) -> int:
 
 def radix_sort(a: list[int], base: int = 10) -> list[int]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция разделяющая массив чисел на 2 массива с положительными и отрицательными и использующая для каждого массива функцию sort, которая реализует поразрядную сортировку
+    :return: Возвращает отсортированный по возрастанию массив чисел
     """
 
     arr_plus: list[int] = [to_10_base(el, base) for el in a if el >= 0]
     arr_minus: list[int] = [to_10_base(el, base) for el in a if el < 0]
 
     if len(arr_minus) > 0:
-        arr_minus = sort(arr_minus, 10)
-        arr_plus = sort(arr_plus, 10)
+        arr_minus:list[int] = sort(arr_minus, 10)
+        arr_plus:list[int] = sort(arr_plus, 10)
         arr_minus = [-el for el in arr_minus]
         arr_minus.reverse()
         return arr_minus + arr_plus
@@ -30,8 +30,8 @@ def radix_sort(a: list[int], base: int = 10) -> list[int]:
 
 def sort(a: list[int], base: int = 10) -> list[int]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция реализующая поразрядную сортировку
+    :return:  Возвращает отсортированный по возрастанию массив чисел
     """
 
     max_len: int = max([len(str(x)) for x in a])

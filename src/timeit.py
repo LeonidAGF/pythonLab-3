@@ -3,9 +3,9 @@ import time
 
 def timeit_once(func, *args, **kwargs) -> float:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция считает время пройденное с начала исполнения функции func
+    :return: возвращает количество времени прошедшего с момента старта выполнения func и до её окончания
     """
-    start_time = time.time()
+    start_time:float = time.time()
     func(*args, **kwargs)
     return time.time() - start_time

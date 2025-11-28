@@ -3,8 +3,8 @@ import math
 
 def bucket_sort(a: list[float], buckets: int = None) -> list[float]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция реализующая корзинную сортиовку
+    :return:Возвращает отсортированный по возрастанию массив чисел
     """
 
     if len(a) == 0:
@@ -22,8 +22,8 @@ def bucket_sort(a: list[float], buckets: int = None) -> list[float]:
     min_el: int = min(arr)
     ran: int = max(arr) - min(arr) + 1
 
-    bucket_num = 0
-    i = math.ceil(min_el + ran / buckets) - 1
+    bucket_num:int = 0
+    i:int = math.ceil(min_el + ran / buckets) - 1
 
     while bucket_num < len(bucket_arr):
         bucket_arr[bucket_num] = [int(el) for el in arr if

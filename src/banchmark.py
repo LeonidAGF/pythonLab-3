@@ -3,8 +3,8 @@ from src.timeit import timeit_once
 
 def benchmark_sorts(arrays: dict[str, list], algos: dict[str, callable]) -> dict[str, dict[str, float]]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция измеряет время выполнения каждой сортировки переданной в algos на массивах данных переданных в arrays
+    :return: функция возвращает словарь, в котором названия сортировок это ключи для получения словаря с времянными результатами работы сортировки
     """
     res: dict[str, dict[str, float]] = {}
     for func_name, link in algos.items():

@@ -3,8 +3,8 @@ import random
 
 def rand_int_array(n: int, lo: int, hi: int, *, distinct=False, seed=None) -> list[int]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция генерирующая массив случайных чисел
+    :return: Возвращает массив случайных чисел
     """
     random.seed(None)
     if seed != None:
@@ -21,8 +21,8 @@ def rand_int_array(n: int, lo: int, hi: int, *, distinct=False, seed=None) -> li
 
 def nearly_sorted(n: int, swaps: int, *, seed=None) -> list[int]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция генерирующая массив чисел от 1 до n и меняющая числа местами в нём случайно swaps раз
+    :return: Массив чисел
     """
     random.seed(None)
     array: list[int] = [int(i) for i in range(1, n + 1)]
@@ -40,8 +40,8 @@ def nearly_sorted(n: int, swaps: int, *, seed=None) -> list[int]:
 
 def many_duplicates(n: int, k_unique=5, *, seed=None) -> list[int]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция генерирующая массив с k_unique количеством уникальных элементов
+    :return: Массив чисел
     """
     random.seed(None)
     if seed != None:
@@ -69,8 +69,8 @@ def many_duplicates(n: int, k_unique=5, *, seed=None) -> list[int]:
 
 def reverse_sorted(n: int) -> list[int]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция возвращающая массив с числами отсортированными в обратном порядке
+    :return: Массив с числами
     """
 
     rand_array: list[int] = [int(i) for i in range(1, n + 1)]
@@ -80,8 +80,8 @@ def reverse_sorted(n: int) -> list[int]:
 
 def rand_float_array(n: int, lo=0.0, hi=1.0, *, seed=None) -> list[float]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция генерирующая массив случайных нецелвх чисел
+    :return: Массив с нецелыми числами
     """
     random.seed(None)
     if seed != None:

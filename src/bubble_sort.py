@@ -1,10 +1,10 @@
 def bubble_sort(a: list[int]) -> list[int]:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Функция реализует пузырьковую сортировку.
+    :return: Возвращает отсортированный по возрастанию массив чисел
     """
-    unordered = 1
-    len_a = len(a)
+    unordered:int = 1
+    len_a:int = len(a)
     while unordered:
         unordered = 0
         for i in range(0, len_a - 1):

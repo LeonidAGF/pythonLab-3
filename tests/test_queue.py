@@ -1,4 +1,4 @@
-from src.my_queue import My_queue, Object
+from src.my_queue import My_queue
 
 
 def test_queue():
